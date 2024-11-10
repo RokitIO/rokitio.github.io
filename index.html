@@ -4,14 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to My Site</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Optional: Link to an external CSS file -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to My GitHub Pages Site</h1>
-        <p>This is a simple static website hosted on GitHub Pages!</p>
-    </header>
-    
+    <div class="video-container">
+        <video autoplay muted loop id="background-video">
+            <source src="your-video-file.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="overlay">
+            <header>
+                <h1>Welcome to My GitHub Pages Site</h1>
+                <p>This is a simple static website hosted on GitHub Pages!</p>
+            </header>
+            <a href="#portfolio" class="cta-button">Explore My Work</a>
+        </div>
+    </div>
     <footer>
         <p>Created by <strong>Rokitio</strong></p>
     </footer>
