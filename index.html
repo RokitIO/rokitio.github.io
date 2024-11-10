@@ -2,26 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to My Site</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Background Video Site</title>
+    <link rel="stylesheet" href="Style.css"> <!-- Link to your external CSS file -->
+    <style>
+        /* Basic styling for the body and video */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow: hidden; /* Remove scrolling */
+        }
+        #background-video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1; /* Make sure the video stays in the background */
+        }
+        .content {
+            position: relative;
+            z-index: 1;
+            color: white;
+            text-align: center;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
 </head>
 <body>
-    <div class="video-container">
-        <video autoplay muted loop id="background-video">
-            <source src="web.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <div class="overlay">
-            <header>
-                <h1>Welcome to My GitHub Pages Site</h1>
-                <p>This is a simple static website hosted on GitHub Pages!</p>
-            </header>
-            <a href="#portfolio" class="cta-button">Explore My Work</a>
-        </div>
+    <video autoplay muted loop id="background-video">
+        <source src="web.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="content">
+        <h1>Welcome to My Site</h1>
+        <p>Explore the content and enjoy the background video!</p>
     </div>
-    <footer>
-        <p>Created by <strong>Rokitio</strong></p>
-    </footer>
 </body>
 </html>
