@@ -7,32 +7,35 @@
     <title>Fullscreen Background Video</title>
     <link rel="stylesheet" href="Style.css"> <!-- Link to your external CSS file -->
     <style>
-        /* Basic styling to ensure the video is fullscreen */
-        body, html {
+        /* Simplified styling to ensure full-screen video */
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+        body, html {
             width: 100%;
             height: 100%;
             overflow: hidden; /* Remove scrolling */
             font-family: Arial, sans-serif;
         }
         #background-video {
-            position: fixed;
+            position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Ensures the video covers the screen */
+            object-fit: cover; /* Ensure video covers the entire screen */
             z-index: -1; /* Keep the video in the background */
         }
         .content {
-            position: relative;
-            z-index: 1;
-            color: white;
-            text-align: center;
+            position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+            z-index: 1; /* Ensure content stays above the video */
         }
     </style>
 </head>
